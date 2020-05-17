@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Search</title>
+    <style>
+        section {
+            display: grid;
+            gap:20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Result</h1>
+    <h3>Found {{result_num}}     data: {{searched}}</h3>
+    <a href = "/export">EXPORT CSV</a>
+    <section>
+        <h4>Contents</h4>
+        <h4>Writer</h4>
+        <h4>Time</h4>
+<!--        <h4>link</h4>-->
+        {% for i in data: %}
+            <span>{{i.contents}}</span>
+            <span>{{i["who"]}}</span>
+            <span>{{i["when"]}}</span>
+<!--            <a href = "{{i['link']}}" target = "_blank">Original Board</a>-->
+        {% endfor %}
+    </section>
+</body>
+</html>
