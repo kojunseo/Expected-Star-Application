@@ -1,0 +1,6 @@
+bs4 == 0.0.1
+flask == 1.1
+konlpy == 0.5.2
+pandas == 1.0
+selenium == 3.141
+sklearn == 0.0.0
